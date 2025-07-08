@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+:root {
+ --primary-color: pink;
+ --secondary-color: #DE5D83;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: "Josefin Slab", serif;
+}
+body {
+    background-color: #fff8f8;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.295);
+}
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-title img {
+    height: 60px;
+    width: auto;
+}
+.logo-title h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: "Josefin Slab", serif;
+}
+main {
+    padding-top: 120px;
+
+}
+.search-section {
+    margin: 20px 50px 40px 50px;
+    
+}
+.search-form {
+    display: flex;
+    width: 100%;
+    border: 2px solid #be9c8f;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.search-form input[type="text"] {
+    flex: 1;
+    padding: 12px 20px;
+    border:none;
+    border-radius: 0;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fffef8;
+}
+.search-form button {
+    background-color: #fffef8;
+    border: none;
+    border-left: 2px solid #be9c8f;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.search-form button img {
+    height: 24px;
+    width: 24px;
+}
+.search-section hr {
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background-color: #be9c8f;
+}
+.full-line {
+    width: 100vw;
+    margin: 20px 0 0 0;
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    position: relative;
+    left: calc(-50vw + 50%);
+}
+.recipe {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px ;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 90%;
+    width: 100%;
+    border: 2px solid #be9c8f;
+    border-radius: 12px;
+    background-color: #fffef8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.295);
+}
+.recipe img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    align-self: center;
+}
+.recipe .content {
+    display: grid;
+    gap: 20px;
+    align-content: start;
+}
+.recipe .tags {
+    display: inline-block;
+    max-width: max-content;
+    padding: 5px 10px;
+    background-color: #fff8f8;
+    font-family: Arial, "Helvetica", sans-serif;
+    color: #333;
+    border-radius: 0;
+    border: 2px solid #be9c8f;
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+.recipe h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #DE5D83;
+    font-family: "Josefin Slab", Serif;
+}
+.rating {
+    font-size: 1.2rem;
+    color: goldenrod;
+}
+.recipe p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+    font-family: Arial, "Helvetica", sans-serif
+}
+
+.logo {
+    justify-content: center;
+    width: 100px;
+}
+.search {
+    width: 20px;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 0 5%;
+    background-color: #fffef8;
+    font-size: 15px;
+    font-family: Arial, "Helvetica", sans-serif;
+    margin: 0;
+    border: none;
+    border-top: 2px solid #be9c8f; 
+}
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+footer .social a {
+    margin-left: 10px;
+}
+footer .social img {
+    height: 24px;
+    width: 24px;
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 70px;
+        padding: 0 10px;
+        justify-content: flex-start;
+    }
+    .logo-title {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .logo-title img {
+        height: 40px;
+    }
+    .logo-title h1 {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 600px) {
+    .search-form {
+        flex-direction: row;
+        width: 100%;
+    }
+    .search-form input[type="text"] {
+        flex: 1;
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    .search-form button {
+        align-items: center;
+        justify-content: center;
+    }
+    .search-form button img{
+        height: 20px;
+        width: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .recipe {
+        flex-direction: column;
+        align-items: center;
+    }
+    .recipe img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .recipe .content {
+        width: 100%;
+        text-align: center;
+    }
+}
