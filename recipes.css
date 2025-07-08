@@ -41,7 +41,7 @@ main {
     padding-top: 120px;
 
 }
-.search-section {
+#search-section {
     margin: 20px 50px 40px 50px;
     
 }
@@ -75,7 +75,7 @@ main {
     height: 24px;
     width: 24px;
 }
-.search-section hr {
+#search-section hr {
     margin-top: 20px;
     border: none;
     height: 2px;
@@ -90,7 +90,7 @@ main {
     position: relative;
     left: calc(-50vw + 50%);
 }
-.recipe {
+#recipe {
     display: flex;
     align-items: flex-start;
     gap: 20px ;
@@ -103,21 +103,28 @@ main {
     background-color: #fffef8;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.295);
 }
-.recipe img {
-    max-width: 400px;
+#recipe img {
+    max-width: 300px;
     height: auto;
     border-radius: 5px;
     object-fit: cover;
     align-self: center;
 }
-.recipe .content {
-    display: grid;
+#recipe .content {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    align-content: start;
+    /* align-content: center; */
 }
-.recipe .tags {
+.tags {
+    display:flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+#recipe .tags {
     display: inline-block;
     max-width: max-content;
+    margin: 0px;
     padding: 5px 10px;
     background-color: #fff8f8;
     font-family: Arial, "Helvetica", sans-serif;
@@ -126,8 +133,9 @@ main {
     border: 2px solid #be9c8f;
     font-size: 0.9rem;
     font-weight: 100;
+    white-space: nowrap;
 }
-.recipe h2 {
+#recipe h2 {
     margin: 0;
     font-size: 1.8rem;
     color: #DE5D83;
@@ -137,7 +145,7 @@ main {
     font-size: 1.2rem;
     color: goldenrod;
 }
-.recipe p {
+#recipe p {
     font-size: 1rem;
     line-height: 1.5;
     color: #444;
@@ -213,16 +221,16 @@ footer .social img {
     }
 }
 @media (max-width: 600px) {
-    .recipe {
+    #recipe {
         flex-direction: column;
         align-items: center;
     }
-    .recipe img {
+    #recipe img {
         max-width: 100%;
         height: auto;
         margin-bottom: 20px;
     }
-    .recipe .content {
+    #recipe .content {
         width: 100%;
         text-align: center;
     }
